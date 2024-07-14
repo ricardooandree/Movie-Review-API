@@ -44,8 +44,8 @@ public class User {
     private String password;
 
     
-    @OneToMany(mappedBy = TABLE_NAME)
+    @OneToMany(mappedBy = "user")
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
-    List<Review> reviews = new ArrayList<>();
-    
+    private List<Review> reviews = new ArrayList<Review>();
+
 }
